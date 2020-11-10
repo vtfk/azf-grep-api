@@ -4,6 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "data:load:utdanningsprogrammer": "node utils/get-utdanningsprogrammer.js",
+    "data:load:programomraader": "node utils/get-programomraader.js",
+    "data:load:opplaeringsfag": "node utils/get-opplaeringsfag.js",
+    "data:load:kompetansemaalsett": "node utils/get-kompetansemaalsett.js",
+    "data:load": "npm run data:load:utdanningsprogrammer && npm run data:load:programomraader && npm run data:load:opplaeringsfag && npm run data:load:kompetansemaalsett",
+    "data:match:utdanningsprogrammer": "node utils/match-utdanningsprogrammer.js",
+    "data:match:programomraader": "node utils/match-programomraader.js",
+    "data:match:opplaeringsfag": "node utils/match-opplaeringsfag.js",
+    "data:match": "npm run data:match:opplaeringsfag && npm run data:match:programomraader && npm run data:match:utdanningsprogrammer",
+    "start": "npm run data:load && npm run data:match",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
