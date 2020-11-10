@@ -25,6 +25,8 @@ node_modules
 dist
 .vscode
 
+.DS_STORE
+
 # Local python packages
 .python_packages/
 

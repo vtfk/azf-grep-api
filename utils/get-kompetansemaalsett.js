@@ -1,6 +1,7 @@
 const { get } = require('axios').default
 const { writeFile } = require('fs').promises
 const { KOMPETANSEMAALSETT_URL } = require('../config')
+const filterVgs = require('../lib/filter-vgs')
 const retrieveData = require('../lib/retrieve-data')
 
 const getKompetansemaalsett = async () => {
@@ -20,7 +21,11 @@ const getKompetansemaalsett = async () => {
 
   console.log('get-kompetansemaalsett', 'got detailed information about', detailedKompetansemaalsett.length, 'kompetansemaalsett')
 
-  await writeFile('data/kompetansemaalsett.json', JSON.stringify(detailedKompetansemaalsett, null, 2), { encoding: 'utf-8' })
+  console.log('get-kompetansemaalsett', 'filtering out kompetansemaalsett not for vgs')
+  const filtered = detailedKompetansemaalsett.filter(filterVgs)
+  console.log('get-kompetansemaalsett', 'filtered out not-vgs kompetansemaalsett', filtered.length, 'remains')
+
+  await writeFile('data/kompetansemaalsett.json', JSON.stringify(filtered, null, 2), { encoding: 'utf-8' })
 
   console.log('get-kompetansemaalsett', 'finished')
 }
