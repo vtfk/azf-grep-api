@@ -14,7 +14,6 @@ const getKompetansemaal = async () => {
   logger('info', ['get-kompetansemaal', 'retrieved', kompetansemaal.length, 'kompetansemaal'])
 
   logger('info', ['get-kompetansemaal', 'get detailed information about the programs'])
-  // const detailedKompetansemaal = await Promise.all(kompetansemaal.map(retrieveData))
 
   const detailedKompetansemaal = []
   for (const maal in kompetansemaal) {
