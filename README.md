@@ -1,25 +1,13 @@
 # azf-grep-api
 
 Mikrotjeneste som returnerer aggregerte data fra UDIR's GREP-API
+Primært for å hente ut kompetansemål tilhørende et utdanningsprogram og programområde
 
 ## API-endepunkter
 
 ### GET /utdanningsprogrammer
 
-### GET /utdanningsprogrammer/:kode
-
-### GET /programomraader
-
-### GET /programomraader/:kode
-
-### GET /opplaeringsfag
-
-### GET /opplaeringsfag/:kode
-
-### GET /kompetansemaalsett
-
-### GET /kompetansemaalsett/:kode
-
+### GET /utdanningsprogrammer/:kode/:trinn/:programomraade
 
 ## Utvikling
 

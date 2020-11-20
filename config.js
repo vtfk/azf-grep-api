@@ -11,7 +11,7 @@ module.exports = {
     prefix d: <http://psi.udir.no/kl06/>
     prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-    SELECT DISTINCT ?up_kode ?up_url_data ?of_url_data ?po_kode ?po_url_data ?lp_kode ?lp_url_data ?trinn ?kompetansemaalsett ?kms_url_data ?km_kode ?km_url_data ?km_tittel WHERE {
+    SELECT DISTINCT ?up_kode ?up_url_data ?of_url_data ?po_kode ?po_url_data ?lp_kode ?lp_url_data ?trinn ?trinn_url_data ?kompetansemaalsett ?kms_url_data ?km_kode ?km_url_data ?km_tittel WHERE {
       ?up rdf:type ?utdanningsprogram ;
           u:url-data ?up_url_data ;
           u:kode ?up_kode ;
@@ -25,6 +25,7 @@ module.exports = {
           u:laereplan-referanse ?lp .
 
       ?tr u:kode ?trinn ;
+          u:url-data ?trinn_url_data ;
           u:rekkefoelge ?rekkefoelge .
 
       ?lp u:status ?lp_status ;

@@ -1,7 +1,7 @@
 const { logger } = require('@vtfk/logger')
 const { writeFile } = require('fs').promises
 const retrieveSparqlData = require('../lib/retrieve-sparql-data')
-const repackUdirSparql = require('../lib/repack-udir-data')
+const repackSparqlData = require('../lib/repack-sparql-data')
 const { SPARQL_URL, PROGFAG_QUERY } = require('../config')
 
 const getSparqlData = async () => {
@@ -14,7 +14,7 @@ const getSparqlData = async () => {
   await writeFile('data/sparql-data.json', JSON.stringify(data, null, 2), { encoding: 'utf-8' })
 
   logger('info', ['get-sparql-data', 'repacking data'])
-  const repackedData = repackUdirSparql(data)
+  const repackedData = await repackSparqlData(data)
   logger('info', ['get-sparql-data', 'repacked data'])
 
   await writeFile('data/data.json', JSON.stringify(repackedData, null, 2), { encoding: 'utf-8' })
