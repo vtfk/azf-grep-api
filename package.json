@@ -4,11 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "data:load:sparql": "node utils/get-sparql-data.js",
-    "data:load:utdanningsprogrammer": "node utils/get-utdanningsprogrammer.js",
-    "data:load:programomraader": "node utils/get-programomraader.js",
-    "data:load:kompetansemaal": "node utils/get-kompetansemaal.js",
-    "data:load": "npm run data:load:sparql && npm run data:load:utdanningsprogrammer && npm run data:load:programomraader && npm run data:load:kompetansemaal",
+    "data:load": "node utils/get-sparql-data.js",
     "start": "npm run data:load",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
