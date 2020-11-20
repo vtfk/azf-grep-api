@@ -6,20 +6,18 @@
   "scripts": {
     "data:load:utdanningsprogrammer": "node utils/get-utdanningsprogrammer.js",
     "data:load:programomraader": "node utils/get-programomraader.js",
-    "data:load:opplaeringsfag": "node utils/get-opplaeringsfag.js",
-    "data:load:kompetansemaalsett": "node utils/get-kompetansemaalsett.js",
-    "data:load": "npm run data:load:utdanningsprogrammer && npm run data:load:programomraader && npm run data:load:opplaeringsfag && npm run data:load:kompetansemaalsett",
-    "data:match:utdanningsprogrammer": "node utils/match-utdanningsprogrammer.js",
-    "data:match:programomraader": "node utils/match-programomraader.js",
-    "data:match:opplaeringsfag": "node utils/match-opplaeringsfag.js",
-    "data:match": "npm run data:match:opplaeringsfag && npm run data:match:programomraader && npm run data:match:utdanningsprogrammer",
-    "start": "npm run data:load && npm run data:match",
+    "data:load:kompetansemaal": "node utils/get-kompetansemaal.js",
+    "data:load:sparql": "node utils/get-sparql-data.js",
+    "data:load": "npm run data:load:utdanningsprogrammer && npm run data:load:programomraader && npm run data:load:kompetansemaal && npm run data:load:sparql",
+    "start": "npm run data:load",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Mats Andreassen <matsand@live.no> (https://github.com/matsand)",
   "license": "MIT",
   "dependencies": {
-    "axios": "0.21.0"
+    "@vtfk/logger": "2.3.3",
+    "axios": "0.21.0",
+    "qs": "6.9.4"
   }
 }
