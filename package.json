@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "data:load": "node utils/get-sparql-data.js",
-    "start": "npm run data:load",
+    "build": "npm run data:load",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
