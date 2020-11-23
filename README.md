@@ -25,8 +25,55 @@ Example response:
         "eng": "Building and Construction",
         "nno": "Bygg- og anleggsteknikk",
         "default": "Bygg- og anleggsteknikk"
-      }
-    },
+      },
+      "trinn": [
+        {
+          "kode": "vg2",
+          "url-data": "https://data.udir.no/kl06/v201906/aarstrinn/vg2",
+          "tittel": {
+            "nno": "Vidaregåande trinn 2",
+            "nob": "Videregående trinn 2",
+            "default": "Videregående trinn 2"
+          },
+          "programomraader": [
+            {
+              "kode": "BAANL2----",
+              "url-data": "https://data.udir.no/kl06/v201906/programomraader/BAANL2----",
+              "tittel": {
+                "nob": "Anleggsteknikk",
+                "eng": "Construction",
+                "sme": "Ráhkadusteknihkka",
+                "nno": "Anleggsteknikk",
+                "default": "Anleggsteknikk"
+              }
+            },
+            {
+              "kode": "BABYG2----",
+              "url-data": "https://data.udir.no/kl06/v201906/programomraader/BABYG2----",
+              "tittel": {
+                "nob": "Byggteknikk",
+                "eng": "Construction Techniques",
+                "sme": "Huksenteknihkka",
+                "nno": "Byggteknikk",
+                "default": "Byggteknikk"
+              }
+            },
+            {
+              "kode": "BAKEM2----",
+              "url-data": "https://data.udir.no/kl06/v201906/programomraader/BAKEM2----",
+              "tittel": {
+                "nob": "Klima-, energi- og miljøteknikk",
+                "eng": "Climate, Energy and Environment Work",
+                "sme": "Dálkkádat-, energiija- ja birasteknihkka",
+                "nno": "Klima-, energi- og miljøteknikk",
+                "default": "Klima-, energi- og miljøteknikk"
+              }
+            },
+            {...}
+          ]
+        }.
+        {...}
+      ]
     {
       "kode": "DH",
       "url-data": "https://data.udir.no/kl06/v201906/utdanningsprogram/DH",
@@ -36,10 +83,10 @@ Example response:
         "nno": "Design og handverk",
         "nob": "Design og håndverk",
         "default": "Design og håndverk"
-      }
+      },
+      "trinn": {...}
     },
-
-    [...]
+    {...}
   ],
   "count": 11
 }
