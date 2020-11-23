@@ -1,0 +1,29 @@
+name: Update data and publish to Azure functions
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 2 * * 0
+  release:
+    types:
+      - released
+jobs:
+  build:
+    name: Install dependencies and get data
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - run: npm install
+    - run: npm run build
+    - name: Commit changes
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "github-actions"
+        git commit -am "Oppdaterte GREP-data (ignore)"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: master
