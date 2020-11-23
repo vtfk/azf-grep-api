@@ -1,4 +1,4 @@
-name: Update data and publish to Azure functions
+name: Update data
 on:
   workflow_dispatch:
   schedule:
@@ -8,7 +8,6 @@ on:
       - released
 jobs:
   build:
-    name: Install dependencies and get data
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
