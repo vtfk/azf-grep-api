@@ -6,14 +6,14 @@ const ieq = require('../lib/incasesensitive-equals')
 const utdanningsprogrammer = require('../data/data.json')
 
 module.exports = async function (context, req) {
-  logConfig({ prefix: context.invocationId, localLogger: context.log })
+  logConfig({ azure: { context }, prefix: 'get-utdanningsprogram' })
   const { kode } = req.params
 
-  logger('info', ['get-utdanningsprogram', 'returning utdanningsprogram', kode])
+  logger('info', ['returning utdanningsprogram', kode])
 
   const utdanningsprogram = utdanningsprogrammer.filter(prog => ieq(prog.kode, kode))[0]
   if (!utdanningsprogram) {
-    logger('info', ['get-utdanningsprogram', 'returning utdanningsprogram', kode, 'not found'])
+    logger('info', ['returning utdanningsprogram', kode, 'not found'])
     return new HTTPError(404, 'Utdanningsprogram ikke funnet', { kode }).toJSON()
   }
 
