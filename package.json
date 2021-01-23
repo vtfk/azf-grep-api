@@ -16,7 +16,7 @@
   "author": "Mats Andreassen <matsand@live.no> (https://github.com/matsand)",
   "license": "MIT",
   "dependencies": {
-    "@vtfk/logger": "2.4.0",
+    "@vtfk/logger": "2.4.1",
     "axios": "0.21.1",
     "qs": "6.9.4"
   },
