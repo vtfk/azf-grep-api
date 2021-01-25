@@ -5,7 +5,8 @@ module.exports = {
   LAEREPLANER_URL: 'https://data.udir.no/kl06/laereplaner.json',
   KOMPETANSEMAAL_URL: 'https://data.udir.no/kl06/kompetansemaal.json',
 
-  SPARQL_URL: process.env.GREP_SPARQL_URL || 'http://sandkasse-data.udir.no:7200/repositories/KL06_201906',
+  SPARQL_URL: process.env.GREP_SPARQL_URL || 'https://data.udir.no/kl06/sparql/query',
+  SPARQL_VERSION: process.env.SPARQL_VERSION || 'v201906',
   PROGFAG_QUERY: process.env.GREP_PROGFAG_QUERY || `
     prefix u: <http://psi.udir.no/ontologi/kl06/>
     prefix d: <http://psi.udir.no/kl06/>
