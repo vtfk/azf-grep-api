@@ -21,7 +21,7 @@
     "axios": "0.21.1"
   },
   "devDependencies": {
-    "jest": "27.0.1",
+    "jest": "27.0.3",
     "standard": "16.0.3"
   },
   "standard": {
